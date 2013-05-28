@@ -1,0 +1,5 @@
+Django==1.5.1
+mongoengine==0.8.1
+pymongo==2.5.1
+-e git://github.com/pythonpro/django-registration-me.git#egg=django_registration_me-dev
+-e git://github.com/jschrewe/django-mongodbforms.git#egg=mongodbforms-dev

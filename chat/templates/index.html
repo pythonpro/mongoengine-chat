@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h2>All users:</h2>
+    <ul>
+    {% for u in udata %}
+        <li><a href="{% url 'chat' u.0 %}">{{ u.0 }} ({{ u.1 }}/<b>{{ u.2 }})</b></a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    Please log in to start the chat.
+{% endif %}
+{% endblock %}
